@@ -91,11 +91,15 @@ html {
 
 header .mobile-header {
     padding: 16px;
+    display: flex;
+    align-items: cecnter;
+    justify-content: space-between;
 }
 
 header button {
     all: unset;
 }
+
 
 .logo {
     height: 50px;
@@ -126,7 +130,7 @@ header button {
 .hero h1 {
     /* em v.s rem (relatiive to the root font size) */
     font-size: 2rem;
-    margin: 24px;
+    margin-bottom: 24px;
     color: var(--white);
 }
 
@@ -146,7 +150,7 @@ article:hover {
     filter: contrast(150%);
 }
 
-article article.icon {
+article .icon {
     height: 24px;
     width: 24px;
     /* vw(view width) and vh(view height) using percentage */
@@ -206,6 +210,8 @@ article p {
 footer {
     padding:16px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer a:has(img) {
@@ -217,5 +223,73 @@ footer a:has(img) {
     height: 40px;
 }
 
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  
+    header nav ul {
+        display: flex;
+        gap: 24px;
+        margin-right: 16px;
+    }
+
+    header .mobile-header .hamburger-icon {
+        display: none;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+    .desktop-nav a {
+        text-decoration: none;
+        font-size: larger;
+        color: var(--black)   
+     }
+
+     .desktop-nav {
+        display: inline-block;
+     }
+
+     .hero {
+        padding: 120px 56px;
+     }
+
+     .hero h1 {
+        font-size: 3.5rem;
+        max-width: 70%;
+     }
+
+     .articles-container {
+        display: flex;
+     }
+
+     article {
+        padding: 56px;
+     }
+
+     .contact-form h2 {
+        text-align: center;
+        font-size: 2.5rem;
+     }
+
+     .contact-form form {
+        max-width: 60%;
+        margin: 40px auto;
+     }
+
+     footer {
+        justify-content: center;
+     }
+
+     footer .socials-icon {
+        margin-left: 20px;
+        margin-right: 20px;
+     }
+
+}
+
+
